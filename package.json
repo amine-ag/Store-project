@@ -2,7 +2,7 @@
   "name": "package.json",
   "version": "1.0.0",
   "description": "server side of the simple store management project ",
-  "main": "app.js",
+  "main": "app.js",  
   "scripts": {
     "test": "start"
   },
