@@ -55,8 +55,10 @@ let obj = {
 
         return new Promise((resolve, reject) => {
 
+            let query = `update menu_items set item_status = $1 where 
+                item_id in (` + queryarray.join() + `)`;
             client
-                .query('update menu_items set item_status = $1 where item_id in (' + queryarray.join() + ')', ids)
+                .query(query, ids)
                 .then(results => {
                     resolve(results.rowCount);
                 })

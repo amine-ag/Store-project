@@ -1,4 +1,5 @@
 files.gitignore
+haha.js
 node_modules/.bin/mime
 node_modules/.bin/mime.cmd
 node_modules/.bin/mime.ps1

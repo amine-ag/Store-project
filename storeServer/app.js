@@ -1,16 +1,16 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const client = require('../db_mngt/db_connection');
+require('dotenv').config({path: __dirname + '/.env'})
 const db_query = require('../db_mngt/db_query');
 const { json } = require('body-parser');
-
+const port = process.env.port || 8080;
 const app = express();
 app.use(express.static('storeServer'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const port = process.env.port || 8080;
+
 
 
 app.get('/getmenu', (req, res) => {
@@ -44,11 +44,6 @@ app.get('/', (req, res) => {
             console.log(err.stack);
 
         console.log('file sent client.html');
-
-        let items = [{i_id: '1' , i_quantity: '5'}, {i_id: '2' , i_quantity: '3'}, {i_id: '3' , i_quantity: '4'} ]
-        
-        //db_query.addNewOrderItems(items);
-
     });
 
 })
