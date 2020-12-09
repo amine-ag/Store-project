@@ -1,5 +1,6 @@
 files.gitignore
-haha.js
+storeServer/haha.js
+storeServer/.env
 node_modules/.bin/mime
 node_modules/.bin/mime.cmd
 node_modules/.bin/mime.ps1
