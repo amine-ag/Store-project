@@ -1,0 +1,25 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "server side of the simple store management project ",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amine-ag/storeProject.git"
+  },
+  "author": "Amine_Abdessamie_G",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amine-ag/storeProject/issues"
+  },
+  "homepage": "https://github.com/amine-ag/storeProject#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "pg-format": "^1.0.4"
+  }
+}

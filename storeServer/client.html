@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+
+        let data = [1,14,18];
+
+        $(document).ready(function () {
+            let name = $("#name").val();
+            $("#submit").click(() => {
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:8080/setmenuitemsstatus",
+                    data: JSON.stringify(data),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    error: function (result, status, error) {
+                        
+                        console.log(result + '\n' + status + '\n' + error);
+                    },
+                    success: function (result, status) {
+                        $("#parag").html(result);
+                    }
+                });
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <input id='name' type='text' size='40'></input>
+    <input id='submit' type='button' value='OK'></input>
+
+    <p id="parag"></p>
+</body>
+
+</html>
